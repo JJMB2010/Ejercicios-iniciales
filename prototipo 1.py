@@ -17,3 +17,7 @@ print("suma de variables 2 y 1 es igual a",var2+var1,"unidases")
 var4=int(input("introduce un numero: "))
 var5=int(input("introduce otro numero: "))
 print("el resultado de las dos variables es",var4+var5)
+
+var4=float(input("introduce un numero: "))
+var5=float(input("introduce otro numero: "))
+print("el resultado de las dos variables es",var4+var5)
