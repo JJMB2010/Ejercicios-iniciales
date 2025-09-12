@@ -21,3 +21,4 @@ print("el resultado de las dos variables es",var4+var5)
 var4=float(input("introduce un numero: "))
 var5=float(input("introduce otro numero: "))
 print("el resultado de las dos variables es",var4+var5)
+#variante omega
