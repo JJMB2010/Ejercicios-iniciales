@@ -1,0 +1,22 @@
+#calculadora
+import math
+
+var1=int(input("dime un numero: "))
+var2=int(input("introduce otro numero: "))
+
+var3=input("que queres hacer con estos numeros: suma, resta, multiplicación, división, potencia: ")
+
+if var3==("suma"):
+    print("la suma de estos valores es ", var1+var2)
+
+elif var3==("resta"):
+    print("la resta de estos valores es ",var1-var2)
+
+elif var3==("multiplicación"):
+    print("la multiplicación de estos valores es ",var1*var2)
+
+elif var3==("división"):
+    print("la división de estos valores es ",var1/var2)
+
+elif var3==("potencia"):
+    print("la potencia del primer numero elevado al segundo es de ",var1**var2)
