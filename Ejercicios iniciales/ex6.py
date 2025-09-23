@@ -7,4 +7,4 @@ var4=str(input("dime otra palabra: "))
 var5=str(input("dime otra palabra: "))
 
 print("",var1,var2,var3,var4,var5)
-print("",var1+",",var2+",",var3+",",var4+",",var5)
+print("",var5,var4,var3,var2,var1)
