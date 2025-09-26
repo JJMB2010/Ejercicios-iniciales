@@ -7,7 +7,7 @@ h=float(input("dime tu altura:"))
 imc=peso/h**2
 imc=round(imc, 2)
 
-if (imc >= 25):
-    print("Si pesas",peso,+"kilos y mides",h,+", tu IMC es:",imc)
+if (imc <= 25):
+    print("Si pesas",peso,"kilos y mides",h,", tu IMC es:",imc)
 else:
-    print("Si pesas",peso,+"kilos y mides",h,+", tu IMC es:",imc+"sorpresa")
+    print("Si pesas",peso,"kilos y mides",h,", tu IMC es:",imc,". Hay sobrepeso")
