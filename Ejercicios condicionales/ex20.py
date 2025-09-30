@@ -6,7 +6,6 @@ var2=float(input("dime otro numero:"))
 
 if (var1 > 10)or(var1 < 0)or(var2 > 10)or(var2 < 0):
     print("Uno o los dos números están fuera de los límites establecidos")
-    
 
 elif (var1 == var2):
     print("el numero",var1,"es igual a",var2)
