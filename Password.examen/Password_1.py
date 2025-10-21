@@ -14,8 +14,59 @@ print("     Posición 8 Un número menor o igual que 5")
 #Pregunta asociada a la contraseña
 password=input("Dime la contraseña:")
 
+p0=password[0]
+p1=password[1]
+p2=password[2]
+p3=password[3]
+p4=password[4]
+p5=password[5]
+p6=password[6]
+p7=password[7]
+
 #Codigo para observar la longitud de la contraseña
 long=len(password)
 
 if (long <= 8) and (long >= 6):
-    a
+        
+    if p0.isnumeric():
+        p0=int(p0)
+        if 1 <= p0 <= 5:
+            r1=("")
+        else:
+            r1=("Error en el carácter 1")
+
+    else:
+        r1=("Error en el carácter 1")
+        
+    if p1.isalpha():
+        p1=str(p1)
+        if p1.islower():
+            r2=("")
+        else:
+            r2=("Error en el carácter 2")
+
+    else:
+        r2=("Error en el carácter 2")
+
+    if p2.isalpha():
+        p2=str(p2)
+        if p2.isupper():
+            r3=("")
+        else:
+            r3=("Error en el carácter 3")
+
+    else:
+        r3=("Error en el carácter 3")
+    
+    if p3.isalpha():
+        p3=str(p3)
+        if p3.islower():
+            r4=("")
+        else:
+            r4=("Error en el carácter 4")
+
+    else:
+        r4=("Error en el carácter 4")
+
+else:
+    print("Error, el password tiene una longitud de",long,"caracteres y no cumple los requisitos")
