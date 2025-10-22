@@ -10,9 +10,9 @@ if "5" in res1:
     print("¡Correcto!")
     point=point+1
 else:
-    print("Esa no era la respuesta correcta, era hacer tocar las 5 campanas.")
+    print("Esa no era la respuesta correcta era hacer tocar las 5 campanas.")
 time.sleep(3)
-res2=str(input("¿De qué slime es favorito la Polariguinda?: "))
+res2=str(input("¿De qué sirve el mineral?: "))
 res2=res2.lower()
 if "gemelo" in res2:
     print("¡Correcto!")
