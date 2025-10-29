@@ -2,7 +2,7 @@
 print("INTRODUCCION")
 print("1. La longitud tiene que tener una longitud de 6 a 8 caracteres")
 print("2. Fuerza estos valores segun la posición indicada")
-print("     Posición 1 Un numero mayor o igual que 1 i menor o ogual que 5")
+print("     Posición 1 Un numero mayor o igual que 1 i menor o igual que 5")
 print("     Posición 2 Una letra minúscula")
 print("     Posición 3 Una Letra mayúscula")
 print("     Posición 4 Uno de los siguientes símbolos *, _, @")
@@ -28,6 +28,15 @@ if (long <= 8) and (long >= 6):
     p3=password[3]
     p4=password[4]
     p5=password[5]
+#Dar valor a todas las respuestas
+    r1=("")
+    r2=("")
+    r3=("")
+    r4=("")
+    r5=("")
+    r6=("")
+    r7=("")
+    r8=("")
 #n1
     if p0.isnumeric():
         p0=int(p0)
