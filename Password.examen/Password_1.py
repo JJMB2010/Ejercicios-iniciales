@@ -1,8 +1,8 @@
 #Se mostrará por pantalla las características del password que tiene que insertar
 print("INTRODUCCION")
 print("1. La longitud tiene que tener una longitud de 6 a 8 caracteres")
-print("2. Fuerza estos valores segun la posición indicada")
-print("     Posición 1 Un numero mayor o igual que 1 i menor o igual que 5")
+print("2. Fuerza estos valores según la posición indicada")
+print("     Posición 1 Un número mayor o igual que 1 i menor o igual que 5")
 print("     Posición 2 Una letra minúscula")
 print("     Posición 3 Una Letra mayúscula")
 print("     Posición 4 Uno de los siguientes símbolos *, _, @")
@@ -142,10 +142,10 @@ if (long <= 8) and (long >= 6):
                     r8=("Error en el carácter 8 ")
 #Respuesta final
     if e == 0:
-        print("El formato del PASSWORD és correcto")
+        print("El formato del PASSWORD es correcto")
     
     else:
         print(r1+r2+r3+r4+r5+r6+r7+r8)
-#Error en el numero de dígitos
+#Error en el número de dígitos
 else:
     print("Error, el password tiene una longitud de",long,"caracteres y no cumple los requisitos")
