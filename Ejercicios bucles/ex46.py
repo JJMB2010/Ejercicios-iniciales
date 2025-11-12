@@ -8,7 +8,7 @@ rc=""
 a=a.lower()
 for x in range(0,c):
     s=a[p]
-    if s in "aeiou":
+    if s in "aeiouáéíóúòìùèà":
         rv=rv+s
     else:
         rc=rc+s
