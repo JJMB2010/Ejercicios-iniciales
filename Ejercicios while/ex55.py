@@ -12,6 +12,6 @@ while x<1:
     r=r+1
     print("La suma total es:",st," y el número de repeticiones es:",r)
     if st>50:
-        if st // 2 != 0:
+        if st%2 != 0:
             print("Fin del programa")
             x=1
