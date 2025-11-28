@@ -25,10 +25,21 @@ for x in range(0,3):
         print("La contraseña es correcta")
     else:
         if n < 3:
+<<<<<<< HEAD
             r="El mumero de numeros es incorrecto, porque " & str(n)  & " no es igual o mayor que 3 "
         if l < 3:
             r1="El mumero de letras es incorrecto, porque " + str(l) + " no es igual o mayor que 3 "
         if s < 2:
             r2="El mumero de simbolos es incorrecto, porque " + str(s) + " no es igual o mayor que 2 "
+=======
+            n=str(n)
+            r=("El mumero de numeros es incorrecto, porque " + n + " no es igual o mayor que 3 ")
+        if l < 3:
+            l=str(l)
+            r1=("El mumero de letras es incorrecto, porque " + l + " no es igual o mayor que 3 ")
+        if s < 2:
+            s=str(s)
+            r2=("El mumero de simbolos es incorrecto, porque " + s + " no es igual o mayor que 2 ")
+>>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
             
     print(r+r1+r2)
