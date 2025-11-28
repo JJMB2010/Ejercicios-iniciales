@@ -18,8 +18,6 @@ compone de: bocadillo, acompañamiento y bebida. Un cliente puede pedir más de 
 dependiente a partir del menú (ver imagen), se encarga de introducir los datos. El menú solo se 
 visualiza una vez al ejecutar el programa. El programa debe preguntar al dependiente tras la 
 realización de un pedido, si quiere gestionar otro. 
-<<<<<<< HEAD
-=======
 El establecimiento contempla los siguientes descuentos:
 Si el total a pagar es entre 20 y 30 euros, se aplica un descuento del 5%
 Si el total a pagar es superior a 30 euros, se aplica un descuento del 15%
@@ -50,18 +48,12 @@ informar de que ha introducido un valor equivocado.
 como moverte por los índices.
 - Un pedido puede estar formado por 3, 2 o 1 componentes. Ej. Un usuario puede pedir únicamente
 una bebida.
->>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
 57. Realiza un programa que permita adivinar un número comprendido entre 1 y 5. El programa 
 debe controlar si el usuario introduce un número no comprendido entre 1 y 5
 58. Modifica el programa anterior para que tengas 3 intentos. Utiliza while
 59. Diseña un programa que “piense” un numero aleatorio entre 0 y 1000 para que nos pida que 
 intentemos adivinarlo. En cada intento, el programa nos dirá si el numero introducido es mayor o 
 menor del correcto. No utilices break para salir del bucle. Cuando se acierte el número debe 
-<<<<<<< HEAD
-mostrarse por pantalla un mensaje y el número de intentos
-=======
-mostrarse por pantalla un mensaje y el número de intentos.
->>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
 60. Diseña un programa que al introducir un número, realice su tabla de multiplicar del 1 al 10. 
 Utiliza únicamente el while
 61. A partir del código anterior, haz que el programa finalice si el valor de la tabla de multiplicar es
@@ -72,14 +64,12 @@ hay pares e impares en ese rango. Utiliza for. Contempla si primer valor es supe
 de veces que se repite cada número.
 64. Programa que pida continuamente números por teclado hasta que el usuario introduzca el valor 
 -99. Será entonces cuando por pantalla aparecerán las siguientes estadísticas:
-<<<<<<< HEAD
 65. Programa que pida continuamente números por teclado hasta que el usuario introduzca el valor 
 -99. Por pantalla debe aparecer cuál de todos los números introducidos es el mayo y cuál el menor.
 66. Repite el ejercicio 63. En lugar de ‘tirar’ 100 veces un dado, modifica el programa para ver cómo 
 se comporta el dado en lanzamientos producidos durante aprox 3 segundos.
 67. Realiza de nuevo el programa de Password (fase 2). El password debe tener las siguientes 
 consideraciones:
-=======
 a) total de pares
 b) total de impares
 c) total de números positivos
@@ -99,6 +89,5 @@ Debe contener como mínimo:
 1 letra mayúscula
 2 símbolos (*, _, @, &,/,#)
 1 número mayor o igual que 6 y menor o igual que 5
->>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
 68. Añade al ejercicio anterior la posibilidad de que el programa pregunte si deseas o no continuar 
 introduciendo passwords. Ej. “¿Deseas introducir otro password s/n?

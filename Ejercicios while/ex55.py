@@ -1,9 +1,6 @@
 #55. Última vez que reutilizamos el mismo código.. lo prometo . A partir del programa anterior haz que sea todo exactamente igual pero teniendo en cuenta que el programa se repita siempre y cuando la suma acumulada sea superior a 50 o la suma acumulada sea par. Con While
-<<<<<<< HEAD
-=======
 import math
 
->>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
 x=0
 st=0
 r=0
@@ -15,10 +12,7 @@ while x<1:
     r=r+1
     print("La suma total es:",st," y el número de repeticiones es:",r)
     if st>50:
-<<<<<<< HEAD
-        if st % 2 != 0:
-=======
+
         if st%2 != 0:
->>>>>>> b8e684c0ec0fd6402ee76ed67b4af2f2d7a6de72
             print("Fin del programa")
             x=1
