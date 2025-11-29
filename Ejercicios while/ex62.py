@@ -4,21 +4,30 @@ a=int(input("Dime un número: "))
 b=int(input("Dime otro número: "))
 x=0
 si=""
-
+no=""
 f=a
+
 for x in range(a,b):
 
     if a>b:
         if f%2==0:
             si=si+(str(f)+"-")
+        else:
+            no=no+(str(f)+"-")
         f=f-1
 
     if b>a:
         if f%2==0:
             si=si+(str(f)+"-")
+        else:
+            no=no+(str(f)+"-")
         f=f+1
 
 if f%2==0:
     print(si+str(f))
 else:
     print(si[:-1])
+if f%2!=0:
+    print(no+str(f))
+else:
+    print(no[:-1])
