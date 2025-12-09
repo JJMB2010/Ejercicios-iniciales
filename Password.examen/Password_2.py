@@ -11,6 +11,13 @@ for x in range(0,3):
     pas=str(input("Dime una contraseña: "))
     leng=len(pas)
 
+    #Aquí hay unas contraseñas para poder testear mi código:
+    #  1. P4c=p€la3z
+    #  2. M4nUe1!aR$
+    #  3. Ger4RDFusTe5
+    #  4. nad4
+    #  5. pAn@#~€¬~#€
+
     for i in range(0,leng):
         p=pas[pos]
         if p.isalpha():
@@ -32,3 +39,7 @@ for x in range(0,3):
             r2="El mumero de simbolos es incorrecto, porque " + str(s) + " no es igual o mayor que 2 "
             
     print(r+r1+r2)
+
+# RESUMEN
+# Prueva 1:
+# "El mumero de numeros es incorrecto, porque 2 no es igual o mayor que 3"
