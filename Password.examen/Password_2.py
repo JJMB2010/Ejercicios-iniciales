@@ -1,4 +1,5 @@
 #Password_v2
+error=0
 
 for x in range(0,3):
     n=0
@@ -55,24 +56,54 @@ for x in range(0,3):
     if (n>=3)and(l>=3)and(s>=2)and(a>=1)and(min>=2)and(mid>=3)and(max>=1):
         print("La contraseña es correcta")
     else:
+        error=error+1
         if n < 3:
-            r=" El mumero de numeros es incorrecto, porque " + str(n)  + " no es igual o mayor que 3"
+            r="El mumero de numeros es incorrecto, porque " + str(n)  + " no es igual o mayor que 3 "
         if l < 3:
-            r1=" El mumero de letras es incorrecto, porque " + str(l) + " no es igual o mayor que 3"
+            r1="El mumero de letras es incorrecto, porque " + str(l) + " no es igual o mayor que 3 "
         if s < 2:
-            r2=" El mumero de simbolos es incorrecto, porque " + str(s) + " no es igual o mayor que 2"
+            r2="El mumero de simbolos es incorrecto, porque " + str(s) + " no es igual o mayor que 2 "
         if a < 1:
-            r3=" Te falta el símbolo secreto"
+            r3="Te falta el símbolo secreto "
         if min < 2:
-            r4=" La cantidad de numeros menores es insuficiente"
+            r4="La cantidad de numeros menores es insuficiente "
         if mid < 3:
-            r5=" La cantidad de numeros medianos es insuficiente"
+            r5="La cantidad de numeros medianos es insuficiente "
         if max < 1:
-            r6=" La cantidad de numeros mayores es insuficiente"
+            r6="La cantidad de numeros mayores es insuficiente "
         
             
-    print((r+r1+r2+r4+r5+r6+r3))
+    rf=((r+r1+r2+r4+r5+r6+r3)[:-1])
+    print(rf, end=".")
+    print("")
+
+print("Hay "+str(error)+" errores.")
+print("Hay "+str(3-error)+" aciertos.")
 
 # RESUMEN
-# Prueva 1:
-# 
+# Prueba 1:
+# El mumero de numeros es incorrecto, porque 0 no es igual o mayor que 3 El mumero de simbolos es incorrecto, 
+# porque 0 no es igual o mayor que 2 La cantidad de numeros menores es insuficiente La cantidad de numeros 
+# medianos es insuficiente La cantidad de numeros mayores es insuficiente Te falta el símbolo secreto.
+# 1. Esta prueba me ha servido para poder asegurarme de que mi código puede decir que las letras mayusculas y minusculas son letras.
+
+# Prueba 2:
+# El mumero de simbolos es incorrecto, porque 0 no es igual o mayor que 2 La cantidad de numeros medianos es 
+# insuficiente Te falta el símbolo secreto. El mumero de simbolos es incorrecto, porque 0 no es igual o mayor 
+# que 2 La cantidad de numeros medianos es insuficiente Te falta el símbolo secreto. El mumero de simbolos es 
+# incorrecto, porque 0 no es igual o mayor que 2 La cantidad de numeros medianos es insuficiente Te falta el 
+# símbolo secreto.
+# 2. Esta prueba me ha servido para poder ver como el programa discierne entre numeros y letras.
+
+# Prueba 3:
+# El mumero de numeros es incorrecto, porque 2 no es igual o mayor que 3 La cantidad de numeros menores es 
+# insuficiente La cantidad de numeros medianos es insuficiente La cantidad de numeros mayores es insuficiente 
+# Te falta el símbolo secreto. La cantidad de numeros menores es insuficiente La cantidad de numeros medianos 
+# es insuficiente La cantidad de numeros mayores es insuficiente Te falta el símbolo secreto. El mumero de 
+# simbolos es incorrecto, porque 1 no es igual o mayor que 2 La cantidad de numeros medianos es insuficiente 
+# Te falta el símbolo secreto.
+# 3. Esta prueba me ha servido para poder ver si el código puede ver letras, números y símbolos.
+
+# Prueba 4:
+#
+#
