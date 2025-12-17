@@ -46,8 +46,9 @@ for x in range(0,3):
     #  7. 27BNdbqi(%), """""@@@@@@@", 358358358
     #  8. HHHhhh&&&@259, IHhuHh·%&@2598,"@2HHl5ai/()9
     #  9. IHhuHh·%&@2598, 234b8HBy6, YBvyvjkbybju
-    #  10. "@2HHl5ai/()9,,     a
+    #  10. ,,
 
+#Barrido de posiciones
     for i in range(0,leng):
         p=pas[pos]
 
@@ -69,7 +70,8 @@ for x in range(0,3):
             if str(p) in "@":
                 a=a+1
         pos=pos+1
-    
+
+# Respuestas
     if (n>=3)and(l>=1)and(ll>=2)and(s>=2)and(a>=1)and(min>=2)and(mid>=3)and(max>=1):
         print("La contraseña es correcta")
     else:
@@ -77,9 +79,9 @@ for x in range(0,3):
         if n < 3:
             r="El número de números es incorrecto, porque " + str(n)  + " no es igual o mayor que 3 "
         if l < 1:
-            r1="El número de letras es incorrecto, porque " + str(l) + " no es igual o mayor que 3 "
+            r1="El número de letras es incorrecto, porque " + str(l) + " no es igual o mayor que 1 "
         if ll < 2:
-            rl="El número de letras mayúsculas es incorrecto, porque " + str(ll) + " no es igual o mayor que 2"
+            rl="El número de letras mayúsculas es incorrecto, porque " + str(ll) + " no es igual o mayor que 2 "
         if s < 2:
             r2="El número de simbolos es incorrecto, porque " + str(s) + " no es igual o mayor que 2 "
         if a < 1:
@@ -93,6 +95,7 @@ for x in range(0,3):
         
     
     rf=((r+r1+rl+r2+r4+r5+r6+r3)[:-1])
+    print(rf)
     print("")
 
 print("Hay "+str(error)+" errores.")
@@ -107,28 +110,63 @@ print("Hay "+str(3-error)+" aciertos.")
 
 # Prueba 2:
 # El número de simbolos es incorrecto, porque 0 no es igual o mayor que 2 La cantidad de números medianos es 
-# insuficiente Te falta el símbolo secreto. El número de simbolos es incorrecto, porque 0 no es igual o mayor 
-# que 2 La cantidad de números medianos es insuficiente Te falta el símbolo secreto. El número de simbolos es 
-# incorrecto, porque 0 no es igual o mayor que 2 La cantidad de números medianos es insuficiente Te falta el 
-# símbolo secreto.
+# insuficiente Te falta el símbolo secreto.
 # 2. Esta prueba me ha servido para poder ver como el programa discierne entre números y letras.
 
 # Prueba 3:
 # El número de números es incorrecto, porque 2 no es igual o mayor que 3 La cantidad de números menores es 
 # insuficiente La cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente 
-# Te falta el símbolo secreto. La cantidad de números menores es insuficiente La cantidad de números medianos 
-# es insuficiente La cantidad de números mayores es insuficiente Te falta el símbolo secreto. El número de 
-# simbolos es incorrecto, porque 1 no es igual o mayor que 2 La cantidad de números medianos es insuficiente 
 # Te falta el símbolo secreto.
 # 3. Esta prueba me ha servido para poder ver si el código puede ver letras, números y símbolos.
 
 # Prueba 4:
-# El número de números es incorrecto, porque 0 no es igual o mayor que 3 La cantidad de números menores es 
-# insuficiente La cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente. 
 # El número de números es incorrecto, porque 0 no es igual o mayor que 3 El número de letras es incorrecto, 
-# porque 0 no es igual o mayor que 3 La cantidad de números menores es insuficiente La cantidad de números 
-# medianos es insuficiente La cantidad de números mayores es insuficiente. El número de números es incorrecto, 
-# porque 0 no es igual o mayor que 3 El número de letras es incorrecto, porque 0 no es igual o mayor que 3 La 
-# cantidad de números menores es insuficiente La cantidad de números medianos es insuficiente La cantidad de 
-# números mayores es insuficiente.
+# porque 0 no es igual o mayor que 1 La cantidad de números menores es insuficiente La cantidad de números 
+# medianos es insuficiente La cantidad de números mayores es insuficiente
 # 4. Esta prueba me ha permitido comprender como mi código puede discernir entre diferentes símbolos y "@".
+
+# Prueba 5:
+# El número de letras es incorrecto, porque 0 no es igual o mayor que 1 El número de letras mayúsculas es 
+# incorrecto, porque 0 no es igual o mayor que 2 El número de simbolos es incorrecto, porque 0 no es igual o 
+# mayor que 2 Te falta el símbolo secreto
+# 5. Esta pureba me sireve para ver si el código puede diferenciar y contar los 3 tipos de números que he puesto.
+
+# Prueba 6:
+# El número de números es incorrecto, porque 0 no es igual o mayor que 3 El número de letras es incorrecto, 
+# porque 0 no es igual o mayor que 1 El número de letras mayúsculas es incorrecto, porque 0 no es igual o mayor 
+# que 2 El número de simbolos es incorrecto, porque 1 no es igual o mayor que 2 La cantidad de números menores es 
+# insuficiente La cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente 
+# Te falta el símbolo secreto
+# 6. Esto me sirve para mirar como el programa no se peta si pones un espacio.
+
+# Prueba 7:
+# El número de números es incorrecto, porque 2 no es igual o mayor que 3 La cantidad de números menores es 
+# insuficiente La cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente 
+# Te falta el símbolo secreto. El número de números es incorrecto, porque 0 no es igual o mayor que 3 El número 
+# de letras es incorrecto, porque 0 no es igual o mayor que 1 El número de letras mayúsculas es incorrecto, porque 
+# 0 no es igual o mayor que 2 La cantidad de números menores es insuficiente La cantidad de números medianos es 
+# insuficiente La cantidad de números mayores es insuficiente. El número de letras es incorrecto, porque 0 no es 
+# igual o mayor que 1 El número de letras mayúsculas es incorrecto, porque 0 no es igual o mayor que 2 El número 
+# de simbolos es incorrecto, porque 0 no es igual o mayor que 2 Te falta el símbolo secreto
+# 7. Esto me sirve para ver como al concatenar respuestas anteriores, el codigo dice unas respuestas coherentes.
+
+# Prueba 8:
+# La cantidad de números menores es insuficiente La cantidad de números medianos es insuficiente.
+# 8. Esto me sirve para ver como al concatenar respuestas anteriores, el codigo dice unas respuestas acertadas.
+
+# Prueba 9:
+# La cantidad de números menores es insuficiente La cantidad de números medianos es insuficiente. El número de 
+# simbolos es incorrecto, porque 0 no es igual o mayor que 2 La cantidad de números medianos es insuficiente Te 
+# falta el símbolo secreto. El número de números es incorrecto, porque 0 no es igual o mayor que 3 El número de 
+# simbolos es incorrecto, porque 0 no es igual o mayor que 2 La cantidad de números menores es insuficiente La 
+# cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente Te falta el símbolo 
+# secreto.
+# 9. Esto me sirve para ver como al concatenar respuestas anteriores, el codigo dice unas respuestas exactas.
+
+# Prueba 10:
+# El número de números es incorrecto, porque 0 no es igual o mayor que 3 El número de letras es incorrecto, porque 
+# 0 no es igual o mayor que 1 El número de letras mayúsculas es incorrecto, porque 0 no es igual o mayor que 2 
+# El número de simbolos es incorrecto, porque 0 no es igual o mayor que 2 La cantidad de números menores es 
+# insuficiente La cantidad de números medianos es insuficiente La cantidad de números mayores es insuficiente 
+# Te falta el símbolo secreto.
+# 10. Este testeo me sirve para ver como si no pongo nada, (ni espacios), el código no explota.
