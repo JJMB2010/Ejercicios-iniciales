@@ -2,8 +2,28 @@
 import random
 l=["casa","barco","gato","perro","madera","agua","puente","pantalón"]
 x=str(random.choice(l))
-for y in range(1,len(x)):
-    list(x)
-    a=random.choice(x)
-    list(x).remove(a)
-    print(a)
+b=len(x)
+respuesta=x
+ll=[]
+pal=[]
+sad=0
+
+for r in x:
+    pal.append(r)
+
+for y in range(0,b):
+    a=random.choice(pal)
+    pal.remove(a)
+    ll.append(a)
+print(ll)
+
+while sad!=3:
+    dec=str(input("Dime la palabra: "))
+    if dec == respuesta:
+        print("Correcto")
+        sad=3
+    else:
+        print("Incorrecto")
+        sad=sad+1
+        
+print("No acertastes nada")
