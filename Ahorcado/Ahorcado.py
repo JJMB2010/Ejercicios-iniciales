@@ -6,7 +6,6 @@ Lista_palabrasecreta=["Estrenar","Pasear","Cuñado","Desvelarse","Destripar","In
 
 while tumadre==0:
     ñ=input("Quieres jugar al ahorcado(s/n)? ")
-    dios=1
     if ñ.isalpha():
         if str(ñ) in "Nn":
             print("Adiós :(")
@@ -30,7 +29,9 @@ while tumadre==0:
                 Lista_error=[]
                 si="_"
                 c=""
+                dios=1
                 t=1
+                p=0
                 secret=""
                 b=0
                 w=0
@@ -80,35 +81,23 @@ while tumadre==0:
                                         f=1
                         tiktak2=time.perf_counter()
                         timef=round(tiktak2-tiktak,0)
+
                         if modo in "2" or modo in "4":
                             if timef>=30:
                                 Lista_ahorcado=Lista_ahorcado2
-                                b=1
                                 tiktak2=time.perf_counter()
                                 timef=round(tiktak2-tiktak,0)
                                 if timef > 60:
                                     min=min+1
                                     timef=timef-60
                                 print("Has tardado",min,"minutos y",timef,"segundos.")
-                                print(Lista_partida)
+                                print("["," , ".join(Lista_partida)+"]")
                                 print("Es DECEPCIONANTE >:(")
                                 print("Era",secret)
                                 print("Errores:",len(Lista_error))
                                 print("Aciertos:",len(Lista_acierto))
-                        elif f==1:
-                            if x not in Lista_acierto:
-                                Lista_acierto.append(x)
-                            if "_" not in Lista_partida:
                                 b=1
-                                if timef > 60:
-                                    min=min+1
-                                    timef=timef-60
-                                print("Has tardado",min,"minutos y",timef,"segundos.")
-                                print("Está perfecto :D")
-                                print(Lista_partida)
-                                print("Errores totales:",len(Lista_error))
-                                print("Aciertos totales:",len(Lista_acierto))
-
+                                p=1
                                 while dios==1:
                                     ñ=input("Quieres añadir una palabra(s/n)? ")
                                     if ñ.isalpha():
@@ -129,35 +118,77 @@ while tumadre==0:
                                             print("PARA >:(")
                                     else:
                                         print("PARA >:(")
+                        if f==1 and p==0:
+                            if x not in Lista_acierto:
+                                Lista_acierto.append(x)
+                                print("["," , ".join(Lista_partida)+"]")
+                                print("Errores:","["," , ".join(Lista_error)+"]")
+                                print("Aciertos:","["," , ".join(Lista_acierto)+"]")
+
+                                if "_" not in Lista_partida and p==0:
+                                    b=1
+                                    if timef > 60:
+                                        min=min+1
+                                        timef=timef-60
+                                    print("Has tardado",min,"minutos y",timef,"segundos.")
+                                    print("Está perfecto :D")
+                                    print("["," , ".join(Lista_partida)+"]")
+                                    print("Errores totales:",len(Lista_error))
+                                    print("Aciertos totales:",len(Lista_acierto))
+                                    p=1
+                                    while dios==1:
+                                        ñ=input("Quieres añadir una palabra(s/n)? ")
+                                        if ñ.isalpha():
+                                            if str(ñ) in "Nn":
+                                                Lista_palabrasecreta.remove(secret2)
+                                                dios=0
+                                            elif str(ñ) in "Ss":
+                                                while t!=0:
+                                                    t=input("Dime una nueva palabra: ")
+                                                    if t.isalpha():
+                                                        Lista_palabrasecreta.append(str(t))
+                                                        Lista_palabrasecreta.remove(secret2)
+                                                        t=0
+                                                        dios=0
+                                                    else:
+                                                        print("Me estás poniendo nervioso :/")
+                                            else:
+                                                print("PARA >:(")
+                                        else:
+                                            print("PARA >:(")
                             else:
-                                print(Lista_partida)
-                                print("Errores:",Lista_error)
-                                print("Aciertos:",Lista_acierto)
-                        elif f==0:
+                                print("["," , ".join(Lista_partida)+"]")
+                                print("Errores:","["," , ".join(Lista_error)+"]")
+                                print("Aciertos:","["," , ".join(Lista_acierto)+"]")
+
+                        elif f==0 and p==0:
                             Lista_ahorcado[w]=Lista_ahorcado2[w]
-                            if modo in "3":
+
+                            if modo in "3" or modo in "4" and p==0:
                                 w=w+1
                                 Lista_ahorcado[w]=Lista_ahorcado2[w]
                             if x not in Lista_error:
                                 Lista_error.append(x)
+
                             w=w+1
-                            print(Lista_ahorcado)
-                            print("Errores:",Lista_error)
-                            print("Aciertos:",Lista_acierto)
-                            if "_" not in Lista_ahorcado:
-                                b=1
+                            print("["," , ".join(Lista_partida)+"]")
+                            print("Errores:","["," , ".join(Lista_error)+"]")
+                            print("Aciertos:","["," , ".join(Lista_acierto)+"]")
+
+                            if "_" not in Lista_ahorcado and p==0:
                                 tiktak2=time.perf_counter()
                                 timef=round(tiktak2-tiktak,0)
                                 if timef > 60:
                                     min=min+1
                                     timef=timef-60
                                 print("Has tardado",min,"minutos y",timef,"segundos.")
-                                print(Lista_partida)
+                                print("["," , ".join(Lista_partida)+"]")
                                 print("Es DECEPCIONANTE >:(")
                                 print("Era",secret)
                                 print("Errores:",len(Lista_error))
                                 print("Aciertos:",len(Lista_acierto))
-
+                                p=1
+                                b=1
                                 while dios==1:
                                     ñ=input("Quieres añadir una palabra(s/n)? ")
                                     if ñ.isalpha():
