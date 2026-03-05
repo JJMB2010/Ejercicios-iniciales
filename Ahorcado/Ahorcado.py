@@ -1,10 +1,12 @@
 import random
 import time
+from datetime import date, datetime
 
 # Empezamos creando una lista con todas las palabras del txt
 tumadre=0
 texto=open('Diccionario.txt', "r+", encoding="utf-8")
 texto=texto.read().splitlines()
+final=open('Partida.txt', "a", encoding="utf-8")
 
 # Inicio del ahorcado
 while tumadre==0:
@@ -59,7 +61,6 @@ while tumadre==0:
                     # Creamos los "_" y empezamos el tiempo
                     for z in range(len(str(secret))):
                         Lista_partida.append(si)
-                    print(secret)
                     tiktak=time.perf_counter()
 
                     # Cosas de modos 
@@ -166,6 +167,15 @@ while tumadre==0:
                                         print("["," , ".join(Lista_partida)+"]")
                                         print("Errores totales:",len(Lista_error))
                                         print("Aciertos totales:",len(Lista_acierto))
+                                        hoy=date.today()
+                                        fecha=hoy.strftime("%d/%m/%Y")
+                                        hora=datetime.now().strftime("%H:%M:%S")
+                                        final.write(f"Fecha de la partida: {fecha}\n")
+                                        final.write(f"Hora de la partida: {hora}\n")
+                                        final.write(f"Palabra secreta: {secret2}\n")
+                                        final.write(f"Número de aciertos: {len(Lista_acierto)}\n")
+                                        final.write(f"Número de errores: {len(Lista_error)}\n")
+                                        final.close()
                                         p=1
                                         tumadre2=1
 
@@ -225,6 +235,15 @@ while tumadre==0:
                                     print("Era",secret)
                                     print("Errores:",len(Lista_error))
                                     print("Aciertos:",len(Lista_acierto))
+                                    hoy=date.today()
+                                    fecha=hoy.strftime("%d/%m/%Y")
+                                    hora=datetime.now().strftime("%H:%M:%S")
+                                    final.write(f"Fecha de la partida: {fecha}\n")
+                                    final.write(f"Hora de la partida: {hora}\n")
+                                    final.write(f"Palabra secreta: {secret2}\n")
+                                    final.write(f"Número de aciertos: {len(Lista_acierto)}\n")
+                                    final.write(f"Número de errores: {len(Lista_error)}\n")
+                                    final.close()
                                     p=1
                                     b=1
                                     tumadre2=1
