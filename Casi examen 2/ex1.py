@@ -1,24 +1,23 @@
-listalista=input()
-lista=listalista.split(",")
-print(listalista)
+lista=input().split(",")
 
-min=float(lista[0])
-max=float(lista[0])
-
-for x in (lista):
-    if float(x)>max:
-        max=x
-    elif float(x)<min:
-        min=x
-
-lista.remove(max)
-lista.remove(min)
+lista=[int(x) for x in lista]
 print(lista)
-sum=0
+
+minim=min(lista)
+maxim=max(lista)
+
+lista.remove(maxim)
+lista.remove(minim)
+print(lista)
+suma=0
 p=0
 
-for y in (lista):
-    sum=sum+int(y)
-    p=p+1
-media=round((sum/p), 2)
+media=sum(lista)/len(lista)
 print(media)
+
+if media<5:
+    print("Rendimiento bajo")
+elif media>=5 and media<10:
+    print("Rendimiento medio")
+else:
+    print("Rendimiento alto")
