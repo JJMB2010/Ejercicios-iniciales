@@ -175,7 +175,6 @@ while tumadre==0:
                                         final.write(f"Palabra secreta: {secret2}\n")
                                         final.write(f"Número de aciertos: {len(Lista_acierto)}\n")
                                         final.write(f"Número de errores: {len(Lista_error)}\n")
-                                        final.close()
                                         p=1
                                         tumadre2=1
 
@@ -243,7 +242,6 @@ while tumadre==0:
                                     final.write(f"Palabra secreta: {secret2}\n")
                                     final.write(f"Número de aciertos: {len(Lista_acierto)}\n")
                                     final.write(f"Número de errores: {len(Lista_error)}\n")
-                                    final.close()
                                     p=1
                                     b=1
                                     tumadre2=1
@@ -285,4 +283,5 @@ while tumadre==0:
         print("ERROR >:[")
         print("Pon Ss o Nn")
 
+final.close()
 # Adiós
