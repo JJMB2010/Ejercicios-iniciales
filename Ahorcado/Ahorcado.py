@@ -167,6 +167,7 @@ while tumadre==0:
                                         print("["," , ".join(Lista_partida)+"]")
                                         print("Errores totales:",len(Lista_error))
                                         print("Aciertos totales:",len(Lista_acierto))
+                                        # Resumen de la partida
                                         hoy=date.today()
                                         fecha=hoy.strftime("%d/%m/%Y")
                                         hora=datetime.now().strftime("%H:%M:%S")
@@ -234,6 +235,7 @@ while tumadre==0:
                                     print("Era",secret)
                                     print("Errores:",len(Lista_error))
                                     print("Aciertos:",len(Lista_acierto))
+                                    # Resumen de la partida
                                     hoy=date.today()
                                     fecha=hoy.strftime("%d/%m/%Y")
                                     hora=datetime.now().strftime("%H:%M:%S")
